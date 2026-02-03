@@ -570,6 +570,8 @@ h6 {
   -ms-transform: translateZ(0);
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
+  width: 100%;
+  background-color: white;
 }
 
 /* template button */
