@@ -142,6 +142,9 @@
 /*--------------------------------------------------------------
 # Utility
 --------------------------------------------------------------*/
+
+.custom-cursor__cursor,.custom-cursor__cursor-two{display: none !important;}
+
 .mt-20 {
   margin-top: 20px;
 }
@@ -17060,8 +17063,9 @@ body.megamenu-popup-active .mobile-nav__content {
    counter-reset: serviceNumber;
 }
 .service-card__number::after {
-  content: "0" counter(serviceNumber);
-  counter-increment: serviceNumber;
+  /* content: "0" counter(serviceNumber); */
+  /* counter-increment: serviceNumber; */
+   content: attr(data-no);
   font-size: 46px;
   color: var(--insuba-white, #ffffff);
   text-shadow: 1px 1px 0 RGBA(var(--insuba-text-rgb, 99, 99, 99), 0.34), -1px -1px 0 RGBA(var(--insuba-text-rgb, 99, 99, 99), 0.34), 1px -1px 0 RGBA(var(--insuba-text-rgb, 99, 99, 99), 0.34), -1px 1px 0 RGBA(var(--insuba-text-rgb, 99, 99, 99), 0.34), 1px 1px 0 RGBA(var(--insuba-text-rgb, 99, 99, 99), 0.34);
@@ -21605,7 +21609,7 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 .contact__image-col {
   position: relative;
-  z-index: 1;
+  z-index: 0;
   flex: 0 0 auto;
   width: 48.464%;
 }

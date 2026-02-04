@@ -156,13 +156,13 @@
                                     <li class="dropdown">
                                         <a href="services.html">Services </a>
                                         <ul>
-                                            <li><a href="deposit-schemes.html">Deposit Schemes</a></li>
-                                            <li><a href="loan-facilities.html">Loan Facilities</a></li>
-                                            <li><a href="saving-bank-account.html">Savings Bank Account</a></li>
-                                            <li><a href="current-account.html">Current Account</a></li>
-                                            <li><a href="rtgs-neft.html">RTGS / NEFT</a></li>
-                                            <li><a href="safe-deposit-locker.html">Safe Deposit Locker</a></li>
-                                            <li><a href="cts-clearing.html">CTS Clearing</a></li>
+                                           <li><a href="services.html#Deposit-Schemes-Section">Deposit Schemes</a></li>
+                                            <li><a href="services.html#Loan-Facilities-Section">Loan Facilities</a></li>
+                                            <li><a href="services.html#Savings-Bank-Account-Section">Savings Bank Account</a></li>
+                                            <li><a href="services.html#Current-Account-Section">Current Account</a></li>
+                                            <li><a href="services.html#RTGS-NEFT-Section">RTGS / NEFT</a></li>
+                                            <li><a href="services.html#Safe-Deposit-Locker-Section">Safe Deposit Locker</a></li>
+                                            <li><a href="services.html#CTS-Clearing-Section">CTS Clearing</a></li>
                                         </ul>
                                     </li>
                                      <li class="dropdown">
@@ -170,7 +170,7 @@
                                         <ul>
                                             <li><a href="chairman.html">Chairman</a></li>
                                             <li><a href="vice-chairman.html">Vice Chairman</a></li>
-                                            <li><a href="officials.html">Board Of Directors </a></li>
+                                            <li><a href="board-of-directors.html">Board Of Directors </a></li>
                     
                                         </ul>
 
@@ -373,40 +373,60 @@
 }
 
 </style>
+
+
 <script>
+let fdPanelVisible = false;
+let isAutoScrolling = false;
+
 function toggleFDPanel() {
   const panel = document.getElementById('fdPanel');
 
-  // Always open the panel
   panel.classList.add('open');
+  scrollToPanelWithOffset(panel);
+}
 
-  // Always scroll to the top of the panel
-//   panel.scrollIntoView({
-//     behavior: 'smooth',
-//     block: 'start'
-//   });
+function closeFDPanel() {
+  document.getElementById('fdPanel').classList.remove('open');
+  fdPanelVisible = false;
+}
 
-
-
-
- const headerOffset = 120; // 🔧 adjust to your header height
+function scrollToPanelWithOffset(panel) {
+  const headerOffset = 120; // adjust if needed
   const elementPosition = panel.getBoundingClientRect().top;
   const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+  isAutoScrolling = true;
 
   window.scrollTo({
     top: offsetPosition,
     behavior: 'smooth'
   });
 
-
-
-
+  // Mark visible AFTER scroll finishes
+  setTimeout(() => {
+    fdPanelVisible = true;
+    isAutoScrolling = false;
+  }, 600); // matches smooth scroll duration
 }
 
-function closeFDPanel() {
-  document.getElementById('fdPanel').classList.remove('open');
-}
+// 🔥 AUTO HIDE WHEN SCROLLING DOWN PAST PANEL
+window.addEventListener('scroll', () => {
+  if (isAutoScrolling) return;
+
+  const panel = document.getElementById('fdPanel');
+  if (!panel.classList.contains('open')) return;
+
+  const panelBottom = panel.offsetTop + panel.offsetHeight;
+  const scrollPos = window.pageYOffset + window.innerHeight;
+
+  if (scrollPos > panelBottom + 100 && fdPanelVisible) {
+    panel.classList.remove('open');
+    fdPanelVisible = false;
+  }
+});
 </script>
+
 
 <!------------new code end------------>
 
@@ -552,13 +572,13 @@ function closeFDPanel() {
                             <div class="footer-widget footer-widget--links">
                                 <h2 class="footer-widget__title">Services</h2><!-- /.footer-widget__title -->
                                 <ul class="list-unstyled footer-widget__links">
-                                     <li><a href="deposit-schemes.html">Deposit Schemes</a></li>
-                                            <li><a href="loan-facilities.html">Loan Facilities</a></li>
-                                            <li><a href="saving-bank-account.html">Savings Bank Account</a></li>
-                                            <li><a href="current-account.html">Current Account</a></li>
-                                            <li><a href="rtgs-neft.html">RTGS / NEFT</a></li>
-                                            <li><a href="safe-deposit-locker.html">Safe Deposit Locker</a></li>
-                                            <li><a href="cts-clearing.html">CTS Clearing</a></li>
+                                    <li><a href="services.html#Deposit-Schemes-Section">Deposit Schemes</a></li>
+                                            <li><a href="services.html#Loan-Facilities-Section">Loan Facilities</a></li>
+                                            <li><a href="services.html#Savings-Bank-Account-Section">Savings Bank Account</a></li>
+                                            <li><a href="services.html#Current-Account-Section">Current Account</a></li>
+                                            <li><a href="services.html#RTGS-NEFT-Section">RTGS / NEFT</a></li>
+                                            <li><a href="services.html#Safe-Deposit-Locker-Section">Safe Deposit Locker</a></li>
+                                            <li><a href="services.html#CTS-Clearing-Section">CTS Clearing</a></li>
                                 </ul><!-- /.list-unstyled footer-widget__links -->
                             </div><!-- /.footer-widget -->
                         </div><!-- /.col-xl-2 col-lg-3 col-md-4 -->
