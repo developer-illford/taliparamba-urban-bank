@@ -7504,7 +7504,7 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 @media (max-width: 575px) {
   .main-slider-one__item {
-    padding-top: 200px;
+    padding-top: 50px;
     padding-bottom: 270px;
   }
 }
@@ -22934,4 +22934,41 @@ body.boxed-wrapper .main-header__inner::before {
 .bank-tabs .tab-btn {
   white-space: nowrap;
   font-size: 14px;
+}
+
+
+
+
+
+
+
+
+.fd-panel p{margin-bottom: 10px !important;}
+
+
+.fd-panel-inner ul {
+  list-style: none;
+  padding: 0;
+}
+
+.fd-panel-inner ul li i {
+  color:#19232b;
+  margin-right: 8px;
+}
+
+
+@media (max-width: 575px) {
+.owl-carousel .owl-stage-outer
+{
+      height: 100vh;
+}
+
+.deposit-types {
+    padding: 15px !important;
+}
+.fd-panel .container{
+  padding-left: 0px;
+    padding-right: 0px;
+}
+
 }
