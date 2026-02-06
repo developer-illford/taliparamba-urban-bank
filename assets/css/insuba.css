@@ -2077,6 +2077,7 @@ h6 {
   align-items: flex-start;
   gap: 12px;
   z-index: 2;
+  display:none;
 }
 .team-card-two .social-links li {
   position: relative;
@@ -2281,7 +2282,9 @@ h6 {
   align-items: flex-start;
   gap: 12px;
   z-index: 2;
+  display: none;
 }
+.team-card__content__inner .social-links{display: none;}
 .team-card-three .social-links li {
   position: relative;
   right: -60px;
@@ -16448,6 +16451,8 @@ body.megamenu-popup-active .mobile-nav__content {
   .funfact--home-1 .funfact__item {
     border: 1px solid var(--insuba-border-color, #dddddd);
   }
+
+  .mobile_vounter{display: none;}
 }
 .funfact--home-1 .funfact__content {
   margin: 0;
