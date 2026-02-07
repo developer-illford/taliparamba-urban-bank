@@ -148,14 +148,16 @@
           required: true,
           email: true
         },
-        message: {
-          required: true
-        },
-        subject: {
+        // message: {
+        //   required: true
+        // },
+        type: {
           required: true
         }
       },
       submitHandler: function (form) {
+// console.log( $(form).serialize())
+
         // sending value with ajax request
         $.post(
           $(form).attr("action"),
@@ -164,7 +166,7 @@
             $(form).parent().find(".result").append(response);
             $(form).find('input[type="text"]').val("");
             $(form).find('input[type="email"]').val("");
-            $(form).find("textarea").val("");
+            $(form).find("select").val("");
           }
         );
         return false;

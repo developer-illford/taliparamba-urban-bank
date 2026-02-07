@@ -1203,24 +1203,24 @@ Gold loans are often used for short term household requirements, business purpos
                                 <div class="contact-one__form">
                                     <h3 class="contact-one__title">Start Saving Today <br> with Our Bank</h3>
                                     <!-- /.contact-one__title -->
-                                    <form class="contact__form contact-form-validated" action="inc/sendemail.php">
+                                    <form class="contact__form contact-form-validated2" action="home_action.php" method="post">
                                         <div class="contact__form__group">
                                             <div class="contact__form__control contact__form__control--full">
-                                                <input type="text" name="name" placeholder="Your Name *">
+                                                <input type="text" name="name" placeholder="Your Name *" required>
                                             </div><!-- /.contact__form__control contact__form__control--full -->
                                             <div class="contact__form__control contact__form__control--full">
-                                                <input type="email" name="email" placeholder="Your Email *">
+                                                <input type="email" name="email" placeholder="Your Email *" required>
                                             </div><!-- /.contact__form__control contact__form__control--full -->
                                             <div class="contact__form__control contact__form__control--full">
-                                                <select class="selectpicker" aria-label="Default select example">
+                                                <select class="selectpicker" name="type" aria-label="Default select example">
                                                     <option selected="">Service Type *</option>
-                                                    <option value="1">Deposit Schemes</option>
-                                                    <option value="2">Loan Facilities</option>
-                                                    <option value="3">Savings Bank Account</option>
-                                                    <option value="4">Current Account</option>
-                                                    <option value="5">RTGS / NEFT</option>
-                                                    <option value="6">Safe Deposit Locker</option>
-                                                     <option value="7">CTS Clearing</option>
+                                                    <option value="Deposit Schemes">Deposit Schemes</option>
+                                                    <option value="Loan Facilities">Loan Facilities</option>
+                                                    <option value="Savings Bank Account">Savings Bank Account</option>
+                                                    <option value="Current Account">Current Account</option>
+                                                    <option value="RTGS / NEFT">RTGS / NEFT</option>
+                                                    <option value="Safe Deposit Locker">Safe Deposit Locker</option>
+                                                     <option value="CTS Clearing">CTS Clearing</option>
                                                 </select>
                                             </div><!-- /.contact__form__control -->
                                             <div class="contact__form__control contact__form__control--full">
