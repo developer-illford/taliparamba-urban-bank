@@ -122,12 +122,12 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'morrisoncarehr@gmail.com';
-    $mail->Password   = 'gvljctxeofydmpgc';
+    $mail->Username   = 'taliparambaurbanbank@gmail.com';
+    $mail->Password   = 'bbhjodlliifmslbf';
     $mail->SMTPSecure = 'tls';
     $mail->Port       = 587;
 
-    $mail->setFrom('morrisoncarehr@gmail.com', $name);
+    $mail->setFrom('taliparambaurbanbank@gmail.com', $name);
     // $mail->addAddress('info@morrisoncare.co.uk');
     $mail->addAddress('bibinm.sbsol@gmail.com');
     // $mail->addReplyTo($mail, $name);
